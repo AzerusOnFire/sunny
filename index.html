@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SunnySparksGaming | Stumble Guys Streamer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <canvas id="particle-canvas"></canvas>
+    <header>
+        <img src="channels4_profile.png.png" alt="SunnySparksGaming PFP" class="pfp">
+        <h1>SunnySparksGaming</h1>
+        <p>Stumble Guys Streamer | 4.43k Subscribers</p>
+    </header>
+
+    <div class="container">
+        <section class="info-card hidden-schedule">
+            <h2>Stream Schedule</h2>
+            <p>Catch me live daily from <strong>6pm - 9pm</strong>!</p>
+            <div class="social-links">
+                <a href="https://www.youtube.com/@SunnySparksGamingSSG" class="btn btn-youtube">YouTube</a>
+                <a href="https://discord.com/invite/t6JYRPYxgx" class="btn btn-discord">Join Discord</a>
+            </div>
+        </section>
+
+        <section class="social-section">
+            <a href="https://www.youtube.com/@SunnySparksGamingSSG" class="btn btn-youtube">YouTube Channel</a>
+            <a href="https://discord.com/invite/t6JYRPYxgx" class="btn btn-discord">Join Discord</a>
+        </section>
+
+        <section class="live-stream-card fade-in">
+            <a href="https://www.youtube.com/watch?v=0Shgq_JNT-E" target="_blank" class="live-link">
+                <img src="live.avif" alt="STUMBLE GUYS LIVE" class="live-image">
+                <div class="live-content">
+                    <div class="live-dot"></div>
+                    <h3 class="live-title">🔴STUMBLE GUYS LIVE BLOCK DASH ?🚀| INW SERVER</h3>
+                </div>
+            </a>
+        </section>
+
+        <section class="info-card goal-section">
+            <h2>Help me to become Stumble Guys CC</h2>
+            <div class="progress-container">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+            <p class="progress-text">4.43k / 5k Subscribers</p>
+        </section>
+
+        <section class="updates-card fade-in">
+            <h2>Website Updates</h2>
+            <div class="update-item">
+                <span class="bullet">•</span>
+                <span>Added live update tile.</span>
+            </div>
+            <div class="update-item">
+                <span class="bullet">•</span>
+                <span>Lag spike related to non Chromium browsers like Firefox is currently being fixed.</span>
+            </div>
+            <div class="update-item">
+                <span class="bullet">•</span>
+                <span>Website update timings 6pm and 9pm (expect a shortage during this time).</span>
+            </div>
+            <div class="update-item">
+                <span class="bullet">•</span>
+                <span>If you find any bugs related to this website DM Sunny from Discord.</span>
+            </div>
+        </section>
+
+        <section class="fade-in">
+            <h2>Popular shorts</h2>
+            <div class="shorts-grid">
+                <div class="short-tile">
+                    <a href="https://youtube.com/shorts/fT2ClSh9w1o?si=mHKJ6v3RMMh8BYkk" target="_blank" style="text-decoration: none; color: inherit;">
+                        <img src="kalyani.avif" alt="My Special Edit On Kalyani Hindi Phonk" style="width: 100%; border-radius: 5px;">
+                        <h3>My Special Edit On Kalyani Hindi Phonk🔥🥶</h3>
+                        <p>4.5k views</p>
+                    </a>
+                </div>
+                <div class="short-tile">
+                    <a href="https://youtube.com/shorts/zl3iy3lPKDI?si=f0nn9QjVMGWzg-ES" target="_blank" style="text-decoration: none; color: inherit;">
+                        <img src="special_edit.avif" alt="My Special Edit On Chamak Chalo Hindi Phonk" style="width: 100%; border-radius: 5px;">
+                        <h3>My Special Edit On Chamak Chalo Hindi Phonk🔥🥶</h3>
+                        <p>3.4k views</p>
+                    </a>
+                </div>
+                <div class="short-tile">
+                    <a href="https://youtube.com/shorts/rJG1mU-09gA?si=fStD0j9eid0js4fC" target="_blank" style="text-decoration: none; color: inherit;">
+                        <img src="popular_1st.avif" alt="Stumble Guys AGE 100 To 1" style="width: 100%; border-radius: 5px;">
+                        <h3>Stumble Guys AGE 100 To 1👶 who is the best❓️</h3>
+                        <p>92k views</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-card fade-in">
+            <img src="avatar_new.png" alt="Sunny" class="about-image">
+            <div class="about-content">
+                <h2>About myself</h2>
+                <p>Hey everyone! I'm Sunny, a 16-year-old aspiring content creator from Chandigarh, Punjab, India. 🎮<br><br>
+                I love playing stumble guys, creating entertaining content, improving my skills, and sharing fun moments with the gaming community.<br><br>
+                I'm also focused on expanding my network and building connections with other streamers, gamers, and content creators. I believe that teamwork, friendship, and supporting each other are important parts of growing as a creator. Let's connect, play, grow, and make gaming memories together! ❤️</p>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => {
+                const bar = document.getElementById('progressBar');
+                if (bar) {
+                    bar.style.width = '88.6%';
+                }
+            }, 300);
+        });
+
+        // Scroll fade-in observer
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+        // Particle background animation
+        const canvas = document.getElementById('particle-canvas');
+        const ctx = canvas.getContext('2d');
+
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+
+        window.addEventListener('resize', resizeCanvas);
+        resizeCanvas();
+
+        const particles = [];
+        const particleCount = 50;
+
+        for (let i = 0; i < particleCount; i++) {
+            particles.push({
+                x: Math.random() * canvas.width,
+                y: Math.random() * canvas.height,
+                radius: Math.random() * 2 + 1,
+                color: Math.random() > 0.5 ? '#8a2be2' : '#00d4ff',
+                speedX: (Math.random() - 0.5) * 0.5,
+                speedY: (Math.random() - 0.5) * 0.5,
+                alpha: Math.random() * 0.5 + 0.2
+            });
+        }
+
+        function animateParticles() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            particles.forEach(p => {
+                p.x += p.speedX;
+                p.y += p.speedY;
+
+                if (p.x < 0) p.x = canvas.width;
+                if (p.x > canvas.width) p.x = 0;
+                if (p.y < 0) p.y = canvas.height;
+                if (p.y > canvas.height) p.y = 0;
+
+                ctx.save();
+                ctx.globalAlpha = p.alpha;
+                ctx.beginPath();
+                ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+                ctx.fillStyle = p.color;
+                ctx.shadowBlur = 10;
+                ctx.shadowColor = p.color;
+                ctx.fill();
+                ctx.restore();
+            });
+
+            requestAnimationFrame(animateParticles);
+        }
+
+        animateParticles();
+    </script>
+</body>
+</html>
