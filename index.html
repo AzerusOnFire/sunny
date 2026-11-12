@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sunny | SunnySparksGaming Streamer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="ambient-glow-1"></div>
+    <div class="ambient-glow-2"></div>
+    <canvas id="particle-canvas"></canvas>
+
+    <!-- Floating Navigation Bar -->
+    <div class="nav-wrapper">
+        <nav class="floating-nav">
+            <a href="#" class="nav-brand">
+                <img src="channels4_profile.png.png" alt="Sunny" class="nav-brand-img">
+                <span class="nav-brand-text">SUNNY</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#live" class="nav-link">Live</a></li>
+                <li><a href="#updates" class="nav-link">Updates</a></li>
+                <li><a href="#shorts" class="nav-link">Shorts</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Main Container -->
+    <main class="main-container" id="home">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <div class="brand-badge">
+                    <span class="brand-badge-text">SUNNYSPARKSGAMING</span>
+                    <div class="brand-badge-underline"></div>
+                </div>
+                <h1 class="hero-title">Hey, I'm <span class="cyan-highlight">Sunny.</span></h1>
+                <h2 class="hero-subtitle">Stumble Guys Streamer & Content Creator</h2>
+                <p class="hero-description">Exploring Stumble Guys, building community, and turning gaming passion into entertaining streams and edits.</p>
+                <div class="hero-actions">
+                    <a href="https://www.youtube.com/@SunnySparksGamingSSG" target="_blank" class="btn-primary-cyan">
+                        <span>Watch Channel</span> ➔
+                    </a>
+                    <a href="https://discord.com/invite/t6JYRPYxgx" target="_blank" class="btn-outline-glass">
+                        <span>Join Discord</span>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="orbital-container">
+                    <div class="orbit-ring orbit-ring-1">
+                        <div class="orbit-dot dot-1"></div>
+                    </div>
+                    <div class="orbit-ring orbit-ring-2">
+                        <div class="orbit-dot dot-2"></div>
+                    </div>
+                    <div class="hero-avatar-frame">
+                        <img src="channels4_profile.png.png" alt="Sunny" class="hero-avatar-img">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Live Stream Section (Offline Version) -->
+        <section class="glass-card live-stream-card offline" id="live">
+            <div class="live-content">
+                <div class="live-badge offline">
+                    <div class="live-dot offline"></div>
+                    <span>STREAM OFFLINE</span>
+                </div>
+                <h3 class="live-title">STREAM OFFLINE</h3>
+                <p class="offline-subtitle">Catch the next stream daily from 6pm - 9pm!</p>
+            </div>
+        </section>
+
+        <!-- Subscriber Goal Section -->
+        <section class="glass-card goal-card fade-in">
+            <h2 class="section-title-glow">Help me to become Stumble Guys CC</h2>
+            <div class="progress-container">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+            <p class="progress-text">4.5k / 5k Subscribers</p>
+        </section>
+
+        <!-- Website Updates -->
+        <section class="glass-card fade-in" id="updates">
+            <h2 class="section-title-glow">Website Updates</h2>
+            <div class="update-item">
+                <span class="update-bullet">•</span>
+                <span>Added live update tile.</span>
+            </div>
+            <div class="update-item">
+                <span class="update-bullet">•</span>
+                <span>Lag spike related to non Chromium browsers like Firefox is currently being fixed.</span>
+            </div>
+            <div class="update-item">
+                <span class="update-bullet">•</span>
+                <span>Website update timings 6pm and 9pm (expect a shortage during this time).</span>
+            </div>
+            <div class="update-item">
+                <span class="update-bullet">•</span>
+                <span>If you find any bugs related to this website DM Sunny from Discord.</span>
+            </div>
+        </section>
+
+        <!-- Popular Shorts -->
+        <section class="glass-card fade-in" id="shorts">
+            <h2 class="section-title-glow">Popular Shorts</h2>
+            <div class="shorts-grid">
+                <div class="short-tile">
+                    <a href="https://youtube.com/shorts/fT2ClSh9w1o?si=mHKJ6v3RMMh8BYkk" target="_blank" style="text-decoration: none;">
+                        <img src="kalyani.avif" alt="My Special Edit On Kalyani Hindi Phonk">
+                        <h3>My Special Edit On Kalyani Hindi Phonk🔥🥶</h3>
+                        <p>4.5k views</p>
+                    </a>
+                </div>
+                <div class="short-tile">
+                    <a href="https://youtube.com/shorts/zl3iy3lPKDI?si=f0nn9QjVMGWzg-ES" target="_blank" style="text-decoration: none;">
+                        <img src="special_edit.avif" alt="My Special Edit On Chamak Chalo Hindi Phonk">
+                        <h3>My Special Edit On Chamak Chalo Hindi Phonk🔥🥶</h3>
+                        <p>3.4k views</p>
+                    </a>
+                </div>
+                <div class="short-tile">
+                    <a href="https://youtube.com/shorts/rJG1mU-09gA?si=fStD0j9eid0js4fC" target="_blank" style="text-decoration: none;">
+                        <img src="popular_1st.avif" alt="Stumble Guys AGE 100 To 1">
+                        <h3>Stumble Guys AGE 100 To 1👶 who is the best❓️</h3>
+                        <p>92k views</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="glass-card fade-in" id="about">
+            <h2 class="section-title-glow">About Myself</h2>
+            <div class="about-card-content">
+                <img src="avatar_new.png" alt="Sunny" class="about-avatar-img">
+                <div class="about-text">
+                    <p>Hey everyone! I'm Sunny, a 16-year-old aspiring content creator from Chandigarh, Punjab, India. 🎮<br><br>
+                    I love playing Stumble Guys, creating entertaining content, improving my skills, and sharing fun moments with the gaming community.<br><br>
+                    I'm also focused on expanding my network and building connections with other streamers, gamers, and content creators. I believe that teamwork, friendship, and supporting each other are important parts of growing as a creator. Let's connect, play, grow, and make gaming memories together! ❤️</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => {
+                const bar = document.getElementById('progressBar');
+                if (bar) {
+                    bar.style.width = '90%';
+                }
+            }, 300);
+        });
+
+        // Scroll-responsive Active Section Glass Highlight (ScrollSpy)
+        const sections = document.querySelectorAll('main section[id], main .hero-section');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        window.addEventListener('scroll', () => {
+            let current = 'home';
+            const scrollY = window.scrollY;
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 150;
+                const sectionHeight = section.offsetHeight;
+                if (scrollY >= sectionTop) {
+                    current = section.getAttribute('id') || 'home';
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+
+            // Ensure last section can be selected at the very bottom
+            if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 80) {
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === '#about') {
+                        link.classList.add('active');
+                    }
+                });
+            }
+        });
+
+        // Smooth scroll to center
+        document.querySelectorAll('.nav-link').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                const targetElement = document.querySelector(targetId);
+
+                const elementPosition = targetElement.getBoundingClientRect().top + window.scrollY;
+                const offsetPosition = elementPosition - (window.innerHeight / 2) + (targetElement.offsetHeight / 2);
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Intersection observer for scroll animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.3 }); // Threshold increased for center trigger
+
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+        // Particle background animation
+        const canvas = document.getElementById('particle-canvas');
+        if (canvas) {
+            const ctx = canvas.getContext('2d');
+
+            function resizeCanvas() {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+            }
+
+            window.addEventListener('resize', resizeCanvas);
+            resizeCanvas();
+
+            const particles = [];
+            const particleCount = 40;
+
+            for (let i = 0; i < particleCount; i++) {
+                particles.push({
+                    x: Math.random() * canvas.width,
+                    y: Math.random() * canvas.height,
+                    radius: Math.random() * 2 + 1,
+                    color: Math.random() > 0.5 ? '#00e5ff' : '#2563eb',
+                    speedX: (Math.random() - 0.5) * 0.4,
+                    speedY: (Math.random() - 0.5) * 0.4,
+                    alpha: Math.random() * 0.5 + 0.2
+                });
+            }
+
+            function animateParticles() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+                particles.forEach(p => {
+                    p.x += p.speedX;
+                    p.y += p.speedY;
+
+                    if (p.x < 0) p.x = canvas.width;
+                    if (p.x > canvas.width) p.x = 0;
+                    if (p.y < 0) p.y = canvas.height;
+                    if (p.y > canvas.height) p.y = 0;
+
+                    ctx.save();
+                    ctx.globalAlpha = p.alpha;
+                    ctx.beginPath();
+                    ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+                    ctx.fillStyle = p.color;
+                    ctx.shadowBlur = 8;
+                    ctx.shadowColor = p.color;
+                    ctx.fill();
+                    ctx.restore();
+                });
+
+                requestAnimationFrame(animateParticles);
+            }
+
+            animateParticles();
+        }
+    </script>
+</body>
+</html>
